@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dehiawmsto2fl"
-path="res://.godot/imported/gemini-2.5-flash-ima..._imresizer.png-5a53e9768840d7259bedd32f45148a09.ctex"
+uid="uid://ccfy53e0h080y"
+path="res://.godot/imported/PixelFantasy_Outside_A5.png-39fc215539b267529737d1bdcc0617fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gemini-2.5-flash-ima..._imresizer.png"
-dest_files=["res://.godot/imported/gemini-2.5-flash-ima..._imresizer.png-5a53e9768840d7259bedd32f45148a09.ctex"]
+source_file="res://assets/board/tilesets/PixelFantasy_Outside_A5.png"
+dest_files=["res://.godot/imported/PixelFantasy_Outside_A5.png-39fc215539b267529737d1bdcc0617fe.ctex"]
 
 [params]
 

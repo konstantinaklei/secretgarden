@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbsni8euw740e"]
 
-[ext_resource type="Texture2D" uid="uid://dehiawmsto2fl" path="res://assets/gemini-2.5-flash-ima..._imresizer.png" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://dehiawmsto2fl" path="res://assets/png/gemini-2.5-flash-ima..._imresizer.png" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://b3yldxbog2hpv" path="res://scripts/play.gd" id="2_tbgi4"]
 [ext_resource type="Script" uid="uid://kx6ln6u8bsim" path="res://scripts/quit.gd" id="3_tefeu"]
 [ext_resource type="AudioStream" uid="uid://deoto8yebiane" path="res://music/opES_Viva La Vida (Instrumental Version) - Velvet Moon.mp3" id="4_o6xl0"]
