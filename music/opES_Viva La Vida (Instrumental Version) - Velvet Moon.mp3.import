@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://deoto8yebiane"
+path="res://.godot/imported/opES_Viva La Vida (Instrumental Version) - Velvet Moon.mp3-0bce69207ad7c57ee102190ab50502b1.mp3str"
+
+[deps]
+
+source_file="res://music/opES_Viva La Vida (Instrumental Version) - Velvet Moon.mp3"
+dest_files=["res://.godot/imported/opES_Viva La Vida (Instrumental Version) - Velvet Moon.mp3-0bce69207ad7c57ee102190ab50502b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

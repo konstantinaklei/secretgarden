@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2ehbd0rhen7b"]
 
-[ext_resource type="AudioStream" uid="uid://c2wf5p51eeubc" path="res://mgES_Alive in the Shadows - Ludvig Moulin.mp3" id="1_p0ybc"]
+[ext_resource type="AudioStream" uid="uid://c2wf5p51eeubc" path="res://music/mgES_Alive in the Shadows - Ludvig Moulin.mp3" id="1_p0ybc"]
 
 [node name="Board" type="Node2D"]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbsni8euw740e"]
 
-[ext_resource type="Texture2D" uid="uid://dehiawmsto2fl" path="res://gemini-2.5-flash-ima..._imresizer.png" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://b3yldxbog2hpv" path="res://play.gd" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://kx6ln6u8bsim" path="res://quit.gd" id="2_h2yge"]
-[ext_resource type="AudioStream" uid="uid://deoto8yebiane" path="res://opES_Viva La Vida (Instrumental Version) - Velvet Moon.mp3" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dehiawmsto2fl" path="res://assets/gemini-2.5-flash-ima..._imresizer.png" id="1_jyhfs"]
+[ext_resource type="Script" uid="uid://b3yldxbog2hpv" path="res://scripts/play.gd" id="2_tbgi4"]
+[ext_resource type="Script" uid="uid://kx6ln6u8bsim" path="res://scripts/quit.gd" id="3_tefeu"]
+[ext_resource type="AudioStream" uid="uid://deoto8yebiane" path="res://music/opES_Viva La Vida (Instrumental Version) - Velvet Moon.mp3" id="4_o6xl0"]
 
 [node name="Opening Screen" type="Node2D"]
 position = Vector2(578, 226)
@@ -11,14 +11,14 @@ position = Vector2(578, 226)
 [node name="Gemini2_5FlashIma___Imresizer" type="Sprite2D" parent="."]
 position = Vector2(144.99997, -175.50002)
 scale = Vector2(1.0104166, 1.0175927)
-texture = ExtResource("1_0xm2m")
+texture = ExtResource("1_jyhfs")
 
 [node name="Play" type="Button" parent="Gemini2_5FlashIma___Imresizer"]
 offset_left = -114.0
 offset_top = 286.79663
 offset_right = 117.0
 offset_bottom = 332.92477
-script = ExtResource("2_1bvp3")
+script = ExtResource("2_tbgi4")
 
 [node name="Camera2D" type="Camera2D" parent="Gemini2_5FlashIma___Imresizer"]
 position = Vector2(1.9794021, 7.370351)
@@ -29,7 +29,7 @@ offset_left = -113.0
 offset_top = 448.24515
 offset_right = 116.0
 offset_bottom = 494.37326
-script = ExtResource("2_h2yge")
+script = ExtResource("3_tefeu")
 
 [node name="Options" type="Button" parent="Gemini2_5FlashIma___Imresizer"]
 offset_left = -113.0
@@ -38,7 +38,7 @@ offset_right = 117.0
 offset_bottom = 413.14764
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_h2yge")
+stream = ExtResource("4_o6xl0")
 autoplay = true
 parameters/looping = true
 
