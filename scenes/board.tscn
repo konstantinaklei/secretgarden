@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://c2ehbd0rhen7b"]
+[gd_scene load_steps=81 format=4 uid="uid://c2ehbd0rhen7b"]
 
 [ext_resource type="AudioStream" uid="uid://c2wf5p51eeubc" path="res://music/mgES_Alive in the Shadows - Ludvig Moulin.mp3" id="1_bw3vb"]
 [ext_resource type="Texture2D" uid="uid://bkuictqk4clp5" path="res://assets/board/tilesets/PixelFantasy_Dungeon_A1.png" id="2_b7otg"]
@@ -22,6 +22,27 @@
 [ext_resource type="Texture2D" uid="uid://caehubrtj7mmm" path="res://assets/board/tilesets/PixelFantasy_Inside_A1.png" id="20_5wv4l"]
 [ext_resource type="Texture2D" uid="uid://4qfxvb51npou" path="res://assets/board/tilesets/PixelFantasy_Inside_A2.png" id="21_8qctr"]
 [ext_resource type="Texture2D" uid="uid://bcap2i3mnbujj" path="res://assets/board/tilesets/PixelFantasy_Inside_A4.png" id="22_w0dbm"]
+[ext_resource type="Texture2D" uid="uid://conakq280c6nw" path="res://assets/sprites/kapelo.png" id="23_vn0nv"]
+[ext_resource type="Texture2D" uid="uid://dmfa8xgd1spub" path="res://assets/sprites/kapelo3.png" id="24_d16s1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Gemini_Generated_Image_2jxp8p2jxp8p2jxp.png" id="25_3xv3g"]
+[ext_resource type="Texture2D" uid="uid://7app275nmxys" path="res://assets/sprites/biblio.png" id="26_sola7"]
+[ext_resource type="Texture2D" uid="uid://bp2e15e7ifjyb" path="res://assets/sprites/biblio2.png" id="27_hsymp"]
+[ext_resource type="Texture2D" uid="uid://4atejr78aqer" path="res://assets/sprites/biblio1.png" id="28_a47pe"]
+[ext_resource type="Texture2D" uid="uid://c8djqkwd7tbvg" path="res://assets/sprites/boots.png" id="29_eup36"]
+[ext_resource type="Texture2D" uid="uid://5km0rhso4frv" path="res://assets/sprites/boots3.png" id="30_oqokq"]
+[ext_resource type="Texture2D" uid="uid://cmwe1jhtngmcq" path="res://assets/sprites/boots1.png" id="31_3f10w"]
+[ext_resource type="Texture2D" uid="uid://o732lfda8jn8" path="res://assets/sprites/elixir.png" id="32_428se"]
+[ext_resource type="Texture2D" uid="uid://didcxa0rbvgb0" path="res://assets/sprites/elixir3.png" id="33_55ab4"]
+[ext_resource type="Texture2D" uid="uid://b5mgd4t7s8qs8" path="res://assets/sprites/elixir1.png" id="34_suopy"]
+[ext_resource type="Texture2D" uid="uid://kgi6hyb17txr" path="res://assets/sprites/gata.png" id="35_bbejq"]
+[ext_resource type="Texture2D" uid="uid://d23hntat6oaxj" path="res://assets/sprites/gata3.png" id="36_7405a"]
+[ext_resource type="Texture2D" uid="uid://dwevcg4gbfbw3" path="res://assets/sprites/gata1.png" id="37_pbblb"]
+[ext_resource type="Texture2D" uid="uid://v548dx8joulr" path="res://assets/sprites/knifer.png" id="38_mhvla"]
+[ext_resource type="Texture2D" uid="uid://cx7ghwex2yoij" path="res://assets/sprites/knifer3.png" id="39_fier5"]
+[ext_resource type="Texture2D" uid="uid://belpbvks8q22l" path="res://assets/sprites/knifer1.png" id="40_nn6ox"]
+[ext_resource type="Texture2D" uid="uid://bbuju34u4eqxa" path="res://assets/sprites/potistiri.png" id="41_e06g1"]
+[ext_resource type="Texture2D" uid="uid://dij5qqv583wo4" path="res://assets/sprites/potistiri3.png" id="42_knfb1"]
+[ext_resource type="Texture2D" uid="uid://c7c40f4e04ypn" path="res://assets/sprites/potistiri1.png" id="43_snsby"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7otg"]
 texture = ExtResource("14_l1w03")
@@ -53489,3 +53510,73 @@ tile_set = SubResource("TileSet_oqokq")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 position = Vector2(-30, 4)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -1337.0
+offset_top = -487.99997
+offset_right = -313.0
+offset_bottom = 536.0
+scale = Vector2(0.28372812, 0.2565088)
+texture_normal = ExtResource("23_vn0nv")
+texture_pressed = ExtResource("24_d16s1")
+texture_disabled = ExtResource("25_3xv3g")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 675.9999
+offset_top = 209.99997
+offset_right = 1699.9999
+offset_bottom = 1234.0
+scale = Vector2(0.28372812, 0.2565088)
+texture_normal = ExtResource("26_sola7")
+texture_pressed = ExtResource("27_hsymp")
+texture_disabled = ExtResource("28_a47pe")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = 733.0
+offset_top = -27.00003
+offset_right = 1757.0
+offset_bottom = 997.0
+scale = Vector2(0.28372812, 0.2565088)
+texture_normal = ExtResource("29_eup36")
+texture_pressed = ExtResource("30_oqokq")
+texture_disabled = ExtResource("31_3f10w")
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+offset_left = 590.9999
+offset_top = -331.0
+offset_right = 1614.9999
+offset_bottom = 693.0
+scale = Vector2(0.28372812, 0.2565088)
+texture_normal = ExtResource("32_428se")
+texture_pressed = ExtResource("33_55ab4")
+texture_disabled = ExtResource("34_suopy")
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+offset_left = -942.0001
+offset_top = -358.0
+offset_right = 81.99988
+offset_bottom = 666.0
+scale = Vector2(0.28372812, 0.2565088)
+texture_normal = ExtResource("35_bbejq")
+texture_pressed = ExtResource("36_7405a")
+texture_disabled = ExtResource("37_pbblb")
+
+[node name="TextureButton6" type="TextureButton" parent="."]
+offset_left = -1330.0001
+offset_top = 148.99997
+offset_right = -306.00012
+offset_bottom = 1173.0
+scale = Vector2(0.28372812, 0.2565088)
+texture_normal = ExtResource("38_mhvla")
+texture_pressed = ExtResource("39_fier5")
+texture_disabled = ExtResource("40_nn6ox")
+
+[node name="TextureButton7" type="TextureButton" parent="."]
+offset_left = -1354.0
+offset_top = -168.00002
+offset_right = -330.0
+offset_bottom = 856.0
+scale = Vector2(0.2883461, 0.2565088)
+texture_normal = ExtResource("41_e06g1")
+texture_pressed = ExtResource("42_knfb1")
+texture_disabled = ExtResource("43_snsby")
