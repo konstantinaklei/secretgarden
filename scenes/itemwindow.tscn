@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq6jifr1yguvw"]
+
+[ext_resource type="Script" uid="uid://cvqec7qrrbga6" path="res://scripts/itemwindow.gd" id="1_cidgd"]
+
+[node name="itemwindow" type="Control" node_paths=PackedStringArray("buttons")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cidgd")
+buttons = NodePath("Background/MarginContainer/VBoxContainer/Buttons")
+
+[node name="Background" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+
+[node name="Answer" type="Label" parent="Background/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
