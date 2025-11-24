@@ -20,7 +20,7 @@ func on_press(id:int): ##to ai gia na apantaei katallhla me to antikeimeno
 	Global.in_pressed_action = true
 	Global.step_counter += 1
 	
-	if board.ChosenItem.answers[id]:
+	if Global.ChosenItem.answers[id]:
 		%Answer.text="NAI!"
 		
 	else:
