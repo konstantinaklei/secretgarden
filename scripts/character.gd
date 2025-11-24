@@ -32,3 +32,39 @@ func _play_animation(target_pos:Vector2) -> String:
 		sprite.play("right")
 		return "idle_right"
 	return ""
+
+func sequenced_move():
+	match Global.step_counter: ## dhmioyrgia twn defualt kinhsewn toy paixth 
+		1:
+			print("move 1")
+			move(Vector2(-28, 347))
+			await move_finished
+			await get_tree().create_timer(0.1).timeout
+			move(Vector2(-275, 347))
+		2:
+			print("move 2")
+			move(Vector2(-275, 112))
+			await move_finished
+			await get_tree().create_timer(0.1).timeout
+			move(Vector2(33, 112))
+		3:
+			print("move 3")
+			move(Vector2(349, 112))
+		4:
+			print("move 4")
+			move(Vector2(349, -193))
+			await move_finished
+			await get_tree().create_timer(0.1).timeout
+			move(Vector2(97, -193))
+		5:
+			print("move 5")
+			move(Vector2(-26, -193))
+			await move_finished
+			await get_tree().create_timer(0.1).timeout
+			move(Vector2(-26, -451))
+		6:
+			print("eisai o petros kai exases insallah")
+			move(Vector2(global_position.x, -650))
+			await move_finished
+			await get_tree().create_timer(0.1).timeout
+			$"../Lose Screen".visible=true
