@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i67kojjwpner"
-path="res://.godot/imported/Gemini_Generated_Image_2jxp8p2jxp8p2jxp.png-8b8fe3b9b73804c8fc75cb547f3eec87.ctex"
+path="res://.godot/imported/kapelo.png-cbdb0d0d42bdbe8176a5036f93ab709b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/board/tilesets/Gemini_Generated_Image_2jxp8p2jxp8p2jxp.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_2jxp8p2jxp8p2jxp.png-8b8fe3b9b73804c8fc75cb547f3eec87.ctex"]
+source_file="res://assets/board/tilesets/kapelo.png"
+dest_files=["res://.godot/imported/kapelo.png-cbdb0d0d42bdbe8176a5036f93ab709b.ctex"]
 
 [params]
 
