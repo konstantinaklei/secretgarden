@@ -6,16 +6,14 @@ class_name ItemWindow
 
 @onready var character: Character = %Character
 
-
-
-func _ready() -> void:
+func _ready() -> void: ## dhmiourgia toy box me tis erwthseis 
 	for i in len(Global.questions) :
 		var button:=Button.new()
 		button.text=Global.questions[i]
 		buttons.add_child(button)
 		button.pressed.connect(on_press.bind(i))
 
-func on_press(id:int):
+func on_press(id:int): ##to ai gia na apantaei katallhla me to antikeimeno 
 	if character.is_moving or Global.in_pressed_action:
 		return
 	
@@ -28,42 +26,8 @@ func on_press(id:int):
 	else:
 		%Answer.text="OXI!"
 	
-	match Global.step_counter:
-		1:
-			print("move 1")
-			character.move(Vector2(-28, 347))
-			await character.move_finished
-			await get_tree().create_timer(0.1).timeout
-			character.move(Vector2(-275, 347))
-		2:
-			print("move 2")
-			character.move(Vector2(-275, 112))
-			await character.move_finished
-			await get_tree().create_timer(0.1).timeout
-			character.move(Vector2(33, 112))
-		3:
-			print("move 3")
-			character.move(Vector2(349, 112))
-		4:
-			print("move 4")
-			character.move(Vector2(349, -193))
-			await character.move_finished
-			await get_tree().create_timer(0.1).timeout
-			character.move(Vector2(97, -193))
-		5:
-			print("move 5")
-			character.move(Vector2(-26, -193))
-			await character.move_finished
-			await get_tree().create_timer(0.1).timeout
-			character.move(Vector2(-26, -451))
-		6:
-			print("eisai o petros kai exases insallah")
-			character.move(Vector2(character.global_position.x, -650))
-			await character.move_finished
-			await get_tree().create_timer(0.1).timeout
-			$"../Lose Screen".visible=true
-			
+	character.sequenced_move()
 	
-	await get_tree().create_timer(0.5).timeout
-	visible=false
+	await get_tree().create_timer(0.5).timeout ##dinw xrono ston paixth na dei thn apanthsh
+	visible=false ##diwxnw to parathyro
 	Global.in_pressed_action = false
