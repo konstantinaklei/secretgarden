@@ -100,6 +100,17 @@ db.ΑΠΑΝΤΗΣΗ.insertMany([
   { αντικείμενο: "ΠΟΤΗΣΤΗΡΙ", ιδιότητα: "Έχει φτερά;", απάντηση: "YES" },
   { αντικείμενο: "ΠΟΤΗΣΤΗΡΙ", ιδιότητα: "Μπορεί να συνδεθεί με τη φύση ή το νερό;", απάντηση: "YES" }
 ]);
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// MongoDB connection
+mongoose.connect('mongodb://localhost:27017/leaderboard', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error(err));
+
+
 /*
 db.ΑΠΑΝΤΗΣΗ.countDocuments();
 db.ΑΝΤΙΚΕΙΜΕΝΟ.countDocuments();
