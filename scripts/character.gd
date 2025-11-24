@@ -1,7 +1,7 @@
 extends Node2D
 class_name Character
 
-signal move_finished
+signal move_finished # ta signals einai san kapws webhooks fanatseite
 
 @export var move_speed:float
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D

@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=4 uid="uid://c2ehbd0rhen7b"]
+[gd_scene load_steps=100 format=4 uid="uid://c2ehbd0rhen7b"]
 
 [ext_resource type="Script" uid="uid://c0o6xe0e2gu6" path="res://scripts/board.gd" id="1_3xv3g"]
 [ext_resource type="AudioStream" uid="uid://c2wf5p51eeubc" path="res://music/mgES_Alive in the Shadows - Ludvig Moulin.mp3" id="1_bw3vb"]
@@ -49,6 +49,7 @@
 [ext_resource type="Script" uid="uid://lm6eftoqm0dm" path="res://scripts/character.gd" id="46_eup36"]
 [ext_resource type="Script" uid="uid://cbvigpk1ye7s0" path="res://scripts/make_guess_button.gd" id="46_sola7"]
 [ext_resource type="PackedScene" uid="uid://cq6jifr1yguvw" path="res://scenes/itemwindow.tscn" id="48_a47pe"]
+[ext_resource type="Script" uid="uid://bu2dllchnv2oa" path="res://scenes/leaderboard_manager.gd" id="50_oqokq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7otg"]
 texture = ExtResource("14_l1w03")
@@ -54898,6 +54899,11 @@ offset_top = -193.0
 offset_right = -471.0
 offset_bottom = -193.0
 board = NodePath("..")
+
+[node name="LeaderboardManager" type="Node" parent="."]
+script = ExtResource("50_oqokq")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="LeaderboardManager"]
 
 [connection signal="pressed" from="Lose Screen/PanelContainer/MarginContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="MakeGuess" to="MakeGuess" method="_on_pressed"]
