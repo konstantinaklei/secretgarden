@@ -101,16 +101,30 @@ db.ΑΠΑΝΤΗΣΗ.insertMany([
   { αντικείμενο: "ΠΟΤΗΣΤΗΡΙ", ιδιότητα: "Μπορεί να συνδεθεί με τη φύση ή το νερό;", απάντηση: "YES" }
 ]);
 
+
+
+// 2. ΑΡΧΙΚΟΠΟΙΗΣΗ ΤΟΥ EXPRESS
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/leaderboard', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error(err));
+// 3. ΣΥΝΔΕΣΗ ΣΤΗ MONGODB
+mongoose.connect('mongodb://localhost:27017/leaderboard')
+    .then(() => {
+        console.log('🎉 MongoDB connected successfully!');
+    })
+    .catch(err => {
+        // Ελέγξτε αν ο MongoDB server τρέχει αν δείτε αυτό
+        console.error('❌ MongoDB connection error:', err);
+    });
 
+// 4. (ΣΥΝΕΧΕΙΑ) ΟΡΙΣΜΟΣ SCHEMAS, MODELS, ΚΑΙ ROUTES...
 
+// 5. ΕΚΚΙΝΗΣΗ ΤΟΥ SERVER
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`🚀 Leaderboard API is running on port ${PORT}`);
+});
 /*
 db.ΑΠΑΝΤΗΣΗ.countDocuments();
 db.ΑΝΤΙΚΕΙΜΕΝΟ.countDocuments();
