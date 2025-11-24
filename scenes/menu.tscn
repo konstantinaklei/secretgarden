@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbsni8euw740e"]
+
+[ext_resource type="Script" uid="uid://b8a6gxburygxu" path="res://scripts/menu.gd" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://dehiawmsto2fl" path="res://assets/png/opening scene.png" id="2_mhnvy"]
+[ext_resource type="AudioStream" uid="uid://deoto8yebiane" path="res://music/opES_Viva La Vida (Instrumental Version) - Velvet Moon.mp3" id="3_4ytvr"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_con2f")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-65, -20.500021)
+scale = Vector2(1.0104166, 1.0935185)
+texture = ExtResource("2_mhnvy")
+
+[node name="Play" type="Button" parent="Background"]
+offset_left = -114.0
+offset_top = 286.79663
+offset_right = 117.0
+offset_bottom = 332.92477
+
+[node name="Quit" type="Button" parent="Background"]
+offset_left = -113.0
+offset_top = 448.24515
+offset_right = 116.0
+offset_bottom = 494.37326
+
+[node name="Options" type="Button" parent="Background"]
+offset_left = -113.0
+offset_top = 368.0223
+offset_right = 117.0
+offset_bottom = 413.14764
+
+[node name="Camera2D" type="Camera2D" parent="Background"]
+position = Vector2(-4.9484787, 29.226074)
+scale = Vector2(1, 1.0169492)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(78, -64)
+stream = ExtResource("3_4ytvr")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Background/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Background/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Background/Options" to="." method="_on_options_pressed"]

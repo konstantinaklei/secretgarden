@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dehiawmsto2fl"
-path="res://.godot/imported/gemini-2.5-flash-ima..._imresizer.png-42001fdace03efbb96a4d6ba418a1d30.ctex"
+path="res://.godot/imported/opening scene.png-b6c396f37bace56872c0716b7a0e77f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/gemini-2.5-flash-ima..._imresizer.png"
-dest_files=["res://.godot/imported/gemini-2.5-flash-ima..._imresizer.png-42001fdace03efbb96a4d6ba418a1d30.ctex"]
+source_file="res://assets/png/opening scene.png"
+dest_files=["res://.godot/imported/opening scene.png-b6c396f37bace56872c0716b7a0e77f8.ctex"]
 
 [params]
 
