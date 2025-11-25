@@ -54868,6 +54868,43 @@ text = "Exases"
 layout_mode = 2
 text = "Retry"
 
+[node name="Victory Screen" type="CenterContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -49.0
+offset_right = 86.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Victory Screen"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Victory Screen/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Victory Screen/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Victory Screen/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "YOU WON ! 
+Be remembered by writing your username"
+
+[node name="Submit" type="Button" parent="Victory Screen/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Submit
+"
+
 [node name="Character" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-28, 490)
@@ -54889,7 +54926,7 @@ offset_left = -453.0
 offset_top = 15.0
 offset_right = -385.0
 offset_bottom = 46.0
-text = "PETROS"
+text = "Make a question!"
 script = ExtResource("46_sola7")
 window = NodePath("../itemwindow")
 
@@ -54906,4 +54943,5 @@ script = ExtResource("50_oqokq")
 [node name="HTTPRequest" type="HTTPRequest" parent="LeaderboardManager"]
 
 [connection signal="pressed" from="Lose Screen/PanelContainer/MarginContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Victory Screen/PanelContainer/MarginContainer/VBoxContainer/Submit" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="MakeGuess" to="MakeGuess" method="_on_pressed"]

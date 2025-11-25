@@ -7,7 +7,7 @@ func _ready() -> void:
 	add_to_group("items")
 	pressed.connect(_on_pressed)
 
-func _on_pressed():
+func _on_pressed():##check if correct guess
 	if id == Global.ChosenId:
 		print("bravo petro")
 	else:
