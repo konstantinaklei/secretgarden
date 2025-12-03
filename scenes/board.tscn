@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=4 uid="uid://c2ehbd0rhen7b"]
+[gd_scene load_steps=101 format=4 uid="uid://c2ehbd0rhen7b"]
 
 [ext_resource type="Script" uid="uid://c0o6xe0e2gu6" path="res://scripts/board.gd" id="1_3xv3g"]
 [ext_resource type="AudioStream" uid="uid://c2wf5p51eeubc" path="res://music/mgES_Alive in the Shadows - Ludvig Moulin.mp3" id="1_bw3vb"]
@@ -46,10 +46,11 @@
 [ext_resource type="Texture2D" uid="uid://dij5qqv583wo4" path="res://assets/sprites/potistiri3.png" id="42_knfb1"]
 [ext_resource type="Texture2D" uid="uid://c7c40f4e04ypn" path="res://assets/sprites/potistiri1.png" id="43_snsby"]
 [ext_resource type="Texture2D" uid="uid://bv62dyd20f7br" path="res://assets/sprites/FCharacter2.png" id="45_sola7"]
+[ext_resource type="Script" uid="uid://bvh2joxpx5lyl" path="res://scripts/submit.gd" id="46_3f10w"]
 [ext_resource type="Script" uid="uid://lm6eftoqm0dm" path="res://scripts/character.gd" id="46_eup36"]
 [ext_resource type="Script" uid="uid://cbvigpk1ye7s0" path="res://scripts/make_guess_button.gd" id="46_sola7"]
 [ext_resource type="PackedScene" uid="uid://cq6jifr1yguvw" path="res://scenes/itemwindow.tscn" id="48_a47pe"]
-[ext_resource type="Script" uid="uid://bu2dllchnv2oa" path="res://scenes/leaderboard_manager.gd" id="50_oqokq"]
+[ext_resource type="Script" uid="uid://bu2dllchnv2oa" path="res://scripts/leaderboard_manager.gd" id="50_oqokq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7otg"]
 texture = ExtResource("14_l1w03")
@@ -54743,10 +54744,10 @@ parameters/looping = true
 [node name="Antikeimena" type="Node" parent="."]
 
 [node name="Kapelo" type="TextureButton" parent="Antikeimena"]
-offset_left = -363.0
-offset_top = -364.00003
-offset_right = 661.0
-offset_bottom = 660.0
+offset_left = 27.99997
+offset_top = -424.00003
+offset_right = 1052.0
+offset_bottom = 600.0
 scale = Vector2(0.186337, 0.19841)
 texture_normal = ExtResource("23_vn0nv")
 texture_pressed = ExtResource("24_d16s1")
@@ -54756,10 +54757,10 @@ id = 1
 answers = Array[bool]([true, true, true, true, false, false, true, false])
 
 [node name="Biblio" type="TextureButton" parent="Antikeimena"]
-offset_left = -149.0
-offset_top = -145.0
-offset_right = 875.0
-offset_bottom = 879.0
+offset_left = -473.00003
+offset_top = -150.99998
+offset_right = 551.0
+offset_bottom = 873.0
 scale = Vector2(0.20023106, 0.18097787)
 texture_normal = ExtResource("26_vn0nv")
 texture_pressed = ExtResource("27_d16s1")
@@ -54808,10 +54809,10 @@ id = 5
 answers = Array[bool]([false, true, false, false, true, true, true, true])
 
 [node name="Sickle" type="TextureButton" parent="Antikeimena"]
-offset_left = 187.99988
-offset_top = -466.0
-offset_right = 1211.9999
-offset_bottom = 558.0
+offset_left = 189.0
+offset_top = -488.99997
+offset_right = 1213.0
+offset_bottom = 535.0
 scale = Vector2(0.18905528, 0.16436271)
 texture_normal = ExtResource("38_mhvla")
 texture_pressed = ExtResource("39_fier5")
@@ -54900,10 +54901,14 @@ layout_mode = 2
 text = "YOU WON ! 
 Be remembered by writing your username"
 
+[node name="Username" type="LineEdit" parent="Victory Screen/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="Submit" type="Button" parent="Victory Screen/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Submit
 "
+script = ExtResource("46_3f10w")
 
 [node name="Character" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -54922,19 +54927,19 @@ position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_a47pe")
 
 [node name="MakeGuess" type="Button" parent="." node_paths=PackedStringArray("window")]
-offset_left = -453.0
-offset_top = 15.0
-offset_right = -385.0
-offset_bottom = 46.0
+offset_left = -532.0
+offset_top = -316.0
+offset_right = -391.0
+offset_bottom = -285.0
 text = "Make a question!"
 script = ExtResource("46_sola7")
 window = NodePath("../itemwindow")
 
 [node name="itemwindow" parent="." node_paths=PackedStringArray("board") instance=ExtResource("48_a47pe")]
-offset_left = -471.0
-offset_top = -193.0
-offset_right = -471.0
-offset_bottom = -193.0
+offset_left = -532.0
+offset_top = -516.0
+offset_right = -532.0
+offset_bottom = -516.0
 board = NodePath("..")
 
 [node name="LeaderboardManager" type="Node" parent="."]
@@ -54943,5 +54948,5 @@ script = ExtResource("50_oqokq")
 [node name="HTTPRequest" type="HTTPRequest" parent="LeaderboardManager"]
 
 [connection signal="pressed" from="Lose Screen/PanelContainer/MarginContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
-[connection signal="pressed" from="Victory Screen/PanelContainer/MarginContainer/VBoxContainer/Submit" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Victory Screen/PanelContainer/MarginContainer/VBoxContainer/Submit" to="." method="_on_submit_pressed"]
 [connection signal="pressed" from="MakeGuess" to="MakeGuess" method="_on_pressed"]

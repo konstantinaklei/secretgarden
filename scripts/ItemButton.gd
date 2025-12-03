@@ -10,6 +10,7 @@ func _ready() -> void:
 func _on_pressed():##check if correct guess
 	if id == Global.ChosenId:
 		print("bravo petro")
+		$"../../Victory Screen".visible=true
 	else:
 		Global.step_counter += 1
 		%Character.sequenced_move()

@@ -18,3 +18,14 @@ func _ready() -> void:
 
 func _on_retry_pressed() -> void:
 	get_tree().change_scene_to_packed(Global.BoardScene)
+
+
+func _on_submit_pressed() -> void:
+	var a
+	a=$"Victory Screen/PanelContainer/MarginContainer/VBoxContainer/Username".text
+	if a=="":
+		print("please enter a username")
+		$"Victory Screen/PanelContainer/MarginContainer/VBoxContainer/Label".text="please enter a username"
+	else :
+		$"Victory Screen".visible=false
+		get_tree().quit()
