@@ -104,27 +104,24 @@ db.ΑΠΑΝΤΗΣΗ.insertMany([
 
 
 // 2. ΑΡΧΙΚΟΠΟΙΗΣΗ ΤΟΥ EXPRESS
+const mongoose = require('mongoose');
+const express = require('express');
+const cors = require('cors');
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 3. ΣΥΝΔΕΣΗ ΣΤΗ MONGODB
-mongoose.connect('mongodb://localhost:27017/leaderboard')
-    .then(() => {
-        console.log('🎉 MongoDB connected successfully!');
-    })
-    .catch(err => {
-        // Ελέγξτε αν ο MongoDB server τρέχει αν δείτε αυτό
-        console.error('❌ MongoDB connection error:', err);
-    });
+// ΣΥΝΔΕΣΗ ΜΕ ΤΟ ATLAS (ΟΧΙ LOCALHOST)
+const ATLAS_URI = "mongodb+srv://juniorklei2_db_user:122112@cluster0.bziskud.mongodb.net/leaderboard?retryWrites=true&w=majority";
 
-// 4. (ΣΥΝΕΧΕΙΑ) ΟΡΙΣΜΟΣ SCHEMAS, MODELS, ΚΑΙ ROUTES...
+mongoose.connect(ATLAS_URI)
+    .then(() => console.log('🎉 Connected to Atlas!'))
+    .catch(err => console.error('❌ Error:', err));
 
-// 5. ΕΚΚΙΝΗΣΗ ΤΟΥ SERVER
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`🚀 Leaderboard API is running on port ${PORT}`);
-});
+// Εδώ θα μπουν τα Routes σου...
+
+app.listen(3000, () => console.log('🚀 Server on port 3000'));
 /*
 db.ΑΠΑΝΤΗΣΗ.countDocuments();
 db.ΑΝΤΙΚΕΙΜΕΝΟ.countDocuments();

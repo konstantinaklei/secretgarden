@@ -105,7 +105,7 @@ db.ΑΠΑΝΤΗΣΗ.insertMany([
 // 1. ΕΙΣΑΓΩΓΗ ΤΩΝ ΑΠΑΡΑΙΤΗΤΩΝ ΒΙΒΛΙΟΘΗΚΩΝ
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose'); // <-- Αυτή η γραμμή έλειπε ή δεν εκτελέστηκε!
+const mongoose = require('mongoose'); 
 
 // 2. ΑΡΧΙΚΟΠΟΙΗΣΗ ΤΟΥ EXPRESS
 const app = express();
@@ -113,7 +113,7 @@ app.use(cors());
 app.use(express.json());
 
 // Βάλτε εδώ το URI που πήρατε από το Atlas, αφού βάλετε τον κωδικό και το όνομα χρήστη
-const ATLAS_URI = "mongodb+srv://juniorklei2_db_user:122112@cluster0.bziskud.mongodb.net/leaderboard?appName=Cluster0";
+const ATLAS_URI = "http://localhost:3000/api/scores";
 
 mongoose.connect(ATLAS_URI)
     .then(() => {
